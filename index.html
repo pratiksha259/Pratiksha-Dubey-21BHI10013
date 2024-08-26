@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn-based Chess-like Game with Websocket Communication</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(5, 80px);
+            gap: 0;
+            justify-content: center;
+            margin: 20px auto;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .box:nth-child(odd) {
+            background-color: #e6e6e6ef;
+        }
+
+        .box:nth-child(even) {
+            background-color: #a706dd58;
+        }
+
+        .box.selected {
+            border: 2px solid #c9641c;
+        }
+
+        .box.highlight {
+            background-color: #ff3bb4;
+        }
+
+        .allimg {
+            width: 50px;
+            height: 50px;
+        }
+
+        .allpawn {
+            width: 40px;
+            height: 40px;
+        }
+
+        .turn-indicator {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #cea2a2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">HitWicket - Chess Like Game</h1>
+    <div class="container">
+        <!-- Boxes will be dynamically filled by JavaScript -->
+        <!-- 5x5 Grid Setup -->
+        <div id="b01" class="box"></div>
+        <div id="b02" class="box"></div>
+        <div id="b03" class="box"></div>
+        <div id="b04" class="box"></div>
+        <div id="b05" class="box"></div>
+
+        <div id="b11" class="box"></div>
+        <div id="b12" class="box"></div>
+        <div id="b13" class="box"></div>
+        <div id="b14" class="box"></div>
+        <div id="b15" class="box"></div>
+
+        <div id="b21" class="box"></div>
+        <div id="b22" class="box"></div>
+        <div id="b23" class="box"></div>
+        <div id="b24" class="box"></div>
+        <div id="b25" class="box"></div>
+
+        <div id="b31" class="box"></div>
+        <div id="b32" class="box"></div>
+        <div id="b33" class="box"></div>
+        <div id="b34" class="box"></div>
+        <div id="b35" class="box"></div>
+
+        <div id="b41" class="box"></div>
+        <div id="b42" class="box"></div>
+        <div id="b43" class="box"></div>
+        <div id="b44" class="box"></div>
+        <div id="b45" class="box"></div>
+    </div>
+    
+    <div class="turn-indicator">Player A's Turn</div>
+    <div class="history">
+        <h3>Movement History</h3>
+        <ul class="history-list"></ul>
+    </div>
+    <style>
+        /* Add some basic styles for the popup */
+        .win-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid black;
+            text-align: center;
+            z-index: 1000;
+        }
+        .win-popup button {
+            margin-top: 10px;
+        }
+    </style>
+    
+    <script src="chess.js"></script>
+</body>
+</html>

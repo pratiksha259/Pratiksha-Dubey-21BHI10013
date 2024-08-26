@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(228, 237, 243);
+    color: rgb(10, 10, 10); /* Default text color for the whole page */
+    font-family: Arial, sans-serif; /* Optional: improves text readability */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 0;
+    justify-content: center;
+    margin: 20px auto;
+    border: 2px solid rgb(228, 237, 243);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(51, 1, 43); /* Default text color for boxes */
+}
+
+.box:nth-child(odd) {
+    background-color: #f184ff; /* Darker grey for the odd boxes */
+}
+
+.box:nth-child(even) {
+    background-color: #a539a0; /* Even darker grey for the even boxes */
+}
+
+.box.selected {
+    border: 20px solid #ff6a00;
+}
+
+.box.highlight {
+    background-color: #66b3d6;
+}
+
+.box[data-player="A"] {
+    color: rgb(0, 238, 255); /* Red text for Player A */
+}
+
+.box[data-player="B"] {
+    color: rgb(108, 108, 235); /* Dark blue text for Player B */
+}
+
+.allimg {
+    width: 50px;
+    height: 50px;
+}
+
+.allpawn {
+    width: 40px;
+    height: 40px;
+}
+
+.turn-indicator {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+    color: #350352; /* White color for the turn indicator */
+}
+.win-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    text-align: center;
+}
+
+.win-popup p {
+    margin-bottom: 20px;
+}
+
+.win-popup button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.history h3 {
+    margin-top: 0;
+}
+
+.history-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.history-list li {
+    margin-bottom: 5px;
+    font-family: monospace;
+}
+
