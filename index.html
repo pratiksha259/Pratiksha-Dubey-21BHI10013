@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turn-based Chess-like Game with Websocket Communication</title>
+    <title>Chess Based Game- 21BHI10013</title>
     <link rel="stylesheet" href="styles.css">
     <style>
 
@@ -14,7 +14,7 @@
             gap: 0;
             justify-content: center;
             margin: 20px auto;
-            border: 2px solid rgb(0, 0, 0);
+            
         }
 
         .box {
@@ -26,19 +26,19 @@
         }
 
         .box:nth-child(odd) {
-            background-color: #e6e6e6ef;
+            background-color: #f1e1f3ef;
         }
 
         .box:nth-child(even) {
-            background-color: #a706dd58;
+            background-color: #d30c8780;
         }
 
         .box.selected {
-            border: 2px solid #c9641c;
+            border: 2px solid #38beb8;
         }
 
         .box.highlight {
-            background-color: #ff3bb4;
+            background-color: #6d1d9b;
         }
 
         .allimg {
@@ -54,12 +54,12 @@
         .turn-indicator {
             margin-top: 20px;
             font-size: 24px;
-            color: #cea2a2;
+            color: #3c13d1;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">HitWicket - Chess Like Game</h1>
+    <h1 style="text-align: center;">HitWicket - Chess Like Game 21BHI10013</h1>
     <div class="container">
         <!-- Boxes will be dynamically filled by JavaScript -->
         <!-- 5x5 Grid Setup -->
@@ -95,10 +95,35 @@
     </div>
     
     <div class="turn-indicator">Player A's Turn</div>
-    <div class="history">
-        <h3>Movement History</h3>
-        <ul class="history-list"></ul>
+    
+    <div class="container1">
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p><ul><b>Pawn:</b>
+                <li>Moves one block in any direction (Left, Right, Forward, or Backward).</li>
+                <li>Move commands: L (Left), R (Right), F (Forward), B (Backward)</li>
+                </ul>
+                <ul><b>Hero1:</b>
+                <li>Moves two blocks straight in any direction.</li>
+                <li>Kills any opponent's character in its path.</li>
+                <li>Move commands: L (Left), R (Right), F (Forward), B (Backward)</li>
+                </ul>
+                <ul><b>Hero2:</b>
+                <li>Moves two blocks diagonally in any direction.</li>
+                <li>Kills any opponent's character in its path.</li>
+                <li>Move commands: FL (Forward-Left), FR (Forward-Right), BL (Backward-Left), BR (Backward-Right)</li>
+                </ul>
+            
+            </p>
+        </div>
+        <div class="history">
+            <h2>Movement History</h2>
+            <ul class="history-list">
+            </ul>
+        </div>
     </div>
+    
+    
     <style>
         /* Add some basic styles for the popup */
         .win-popup {
