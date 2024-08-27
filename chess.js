@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const boxes = Array.from(document.querySelectorAll('.box'));
     let selectedBox = null;
     let turn = 'A'; 
+    let movementHistory = [];  // Initialize the movement history array
 
     const ws = new WebSocket('ws://localhost:5500');
 
@@ -39,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         initializeBoard(state);
         updateHistory(state.history || []);
     }
-    
-    let movementHistory = [];
 
     function updateHistory(history) {
         const historyList = document.querySelector('.history-list');
@@ -108,17 +107,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const fromPosition = fromBox.getAttribute('data-pos');
         const toPosition = toBox.getAttribute('data-pos');
         let captured = false;
-    
+
         if (toPiece) {
             captured = true; // A piece was captured
         }
-    
+
         toBox.textContent = fromBox.textContent;
         toBox.setAttribute('data-piece', fromPiece);
         fromBox.textContent = '';
         fromBox.removeAttribute('data-piece');
-    
-        updateHistory([...movementHistory, `Player ${turn} moved its ${fromPiece}`]); // Record the move
+
+        // Update the movement history
+        const moveDescription = `Player ${turn} moved its ${fromPiece}`;
+        movementHistory.push(moveDescription);  // Append the new move to the history
+        updateHistory(movementHistory);         // Update the history list in the UI
+
         switchTurn();
         checkWin();
     }
