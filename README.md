@@ -45,3 +45,21 @@ To get started with this project, follow these instructions:
 3. **Running the code**
     ```bash
    npm start
+
+
+## User Interface
+![UI-1](https://github.com/user-attachments/assets/3eb0ec70-6d24-4e85-a244-29ea37523e75)
+
+![UI-2](https://github.com/user-attachments/assets/813e96da-b481-4923-88c1-c4ed4401e23c)
+
+- **Player A's Turn**:
+![A's Turn](https://github.com/user-attachments/assets/f349ec03-4cc1-4bb0-8de8-f9899b443036)
+
+- **Player B's Turn**:
+![B's Turn](https://github.com/user-attachments/assets/31988dc6-8860-4f47-bf64-3726c1e1c16e)
+
+- **Move History**:
+![Move History](https://github.com/user-attachments/assets/e1d5f9ce-dc07-43c0-8ee0-9de97f2f52c4)
+
+- **Winning Pop-Up**:
+![Win](https://github.com/user-attachments/assets/a9e2e8b0-55cd-4abb-9f3a-7a80d5f53616)
