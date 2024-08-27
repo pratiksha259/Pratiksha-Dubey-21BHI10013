@@ -38,3 +38,7 @@ To get started with this project, follow these instructions:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/pratiksha259/Pratiksha-Dubey-21BHI10013.git
+2. **Instal Dependencies**
+   
+ ``` cd your-repository```
+ ```npm install```
