@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(228, 237, 243);
-    color: rgb(10, 10, 10); /* Default text color for the whole page */
-    font-family: Arial, sans-serif; /* Optional: improves text readability */
+    background-color: #c4d2d3; /* Light grey-blue for the background */
+    color: #333; /* Dark grey for text */
+    font-family: 'Comic Sans MS'; /* Clean and modern font */
 }
 
 .container {
@@ -11,7 +11,7 @@ body {
     gap: 0;
     justify-content: center;
     margin: 20px auto;
-    border: 2px solid rgb(228, 237, 243);
+    border: 2px solid #d0d7de; /* Soft grey border for the grid */
 }
 
 .box {
@@ -20,31 +20,25 @@ body {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: rgb(51, 1, 43); /* Default text color for boxes */
+    color: #333; /* Dark grey text for boxes */
 }
 
 .box:nth-child(odd) {
-    background-color: #f184ff; /* Darker grey for the odd boxes */
+    background-color: #e3e8f0; /* Light blue-grey for odd boxes */
 }
 
 .box:nth-child(even) {
-    background-color: #a539a0; /* Even darker grey for the even boxes */
+    background-color: #cfd9e6; /* Slightly darker blue-grey for even boxes */
 }
 
-.box.selected {
-    border: 20px solid #ff6a00;
-}
 
-.box.highlight {
-    background-color: #66b3d6;
-}
 
 .box[data-player="A"] {
-    color: rgb(0, 238, 255); /* Red text for Player A */
+    color: #3f5fc0; /* Royal blue for Player A */
 }
 
 .box[data-player="B"] {
-    color: rgb(108, 108, 235); /* Dark blue text for Player B */
+    color: #dc143c; /* Crimson for Player B */
 }
 
 .allimg {
@@ -59,12 +53,13 @@ body {
 
 .turn-indicator {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 60px;
     text-align: center;
     font-size: larger;
     font-weight: 700;
-    color: #350352; /* White color for the turn indicator */
+    color: #0d17a7; /* Same royal blue as Player A */
 }
+
 .win-popup {
     position: fixed;
     top: 50%;
@@ -72,26 +67,26 @@ body {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    border: 2px solid black;
+    border: 2px solid #b0c4de; /* Light steel blue for the border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     text-align: center;
 }
 
-.win-popup p {
-    margin-bottom: 20px;
-}
-
 .win-popup button {
+    background-color: #229c32; /* Light sky blue for the button */
+    border: none;
+    color: #fff; /* White text */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 }
+
 .history {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #d49494;
+    background-color: #fcfcfc; /* Soft light blue-grey background */
 }
 
 .history h3 {
@@ -106,5 +101,28 @@ body {
 .history-list li {
     margin-bottom: 5px;
     font-family: monospace;
+    color: #555; /* Medium grey for history text */
 }
 
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px; /* Maintain the gap */
+}
+
+.instructions, .history {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ffffff; /* Light grey border */
+    border-radius: 8px;
+}
+
+.instructions {
+    background-color: #ffffff; /* Soft grey-blue background for instructions */
+}
+
+.instructions h2, .history h2 {
+    color: #333; /* Dark grey for headings */
+}
