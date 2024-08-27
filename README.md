@@ -42,3 +42,6 @@ To get started with this project, follow these instructions:
    ```bash
    cd your-repository
    npm install
+3. **Running the code**
+    ```bash
+   npm start
